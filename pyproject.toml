@@ -1,0 +1,11 @@
+[project]
+name = "arxiv-to-linkedin"
+version = "0.1.0"
+description = "Extract arxiv papers with docling and generate LinkedIn posts using Claude agent teams"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "arxiv>=2.4.0",
+    "docling>=2.72.0",
+    "requests>=2.32.5",
+]

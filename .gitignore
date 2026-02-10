@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+wheels/
+
+# Virtual environment
+.venv/
+
+# Output files (paper extractions, generated posts)
+output/
+
+# OS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
