@@ -143,7 +143,14 @@ def extract_paper(url_or_id: str, output_dir: str = "output") -> dict:
 
     # Save extracted images from docling
     image_paths = []
-    for i, (key, image) in enumerate(result.document.pictures.items()):
+    pictures = result.document.pictures
+    if isinstance(pictures, dict):
+        pic_items = pictures.values()
+    elif isinstance(pictures, list):
+        pic_items = pictures
+    else:
+        pic_items = []
+    for i, image in enumerate(pic_items):
         img_path = output_path / f"figure_{i+1}.png"
         try:
             pil_image = image.get_image(result.document)
